@@ -5,9 +5,9 @@ import "fmt"
 const TestVersion = 2
 
 // Define the number of minutes in a day for use in calculations.
-var minutesInDay int = 24 * 60
+const minutesInDay int = 24 * 60
 // Define the number of minutes in a hour for use in calculations.
-var minutesInHour int = 60
+const minutesInHour int = 60
 
 type Clock struct {
 	// Minute of the day
