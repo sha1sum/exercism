@@ -3,12 +3,10 @@ package gigasecond
 import "time"
 
 const TestVersion = 2
-// Define a Duration type for a gigasecond
-const gigasecond = time.Duration(1000000000 * time.Second)
 
 // Add a gigasecond to a birthday and return a Time type
 func AddGigasecond(birthday time.Time) time.Time {
-	return birthday.Add(gigasecond)
+	return birthday.Add(1e9 * time.Second)
 }
 
 // Get the time zone of the birthday
