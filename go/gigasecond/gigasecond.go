@@ -11,5 +11,6 @@ func AddGigasecond(birthday time.Time) time.Time {
 
 // Get the time zone of the birthday
 var location, err = time.LoadLocation("America/New_York")
+
 // Set a birth date and time using the defined time zone
 var Birthday time.Time = time.Date(1983, 9, 9, 9, 34, 0, 0, location)

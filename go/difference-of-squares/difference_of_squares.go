@@ -8,7 +8,7 @@ func SquareOfSums(number int) int {
 
 // Get the sum of the squares from 1 through the number provided
 func SumOfSquares(number int) int {
-	return number * (number + 1) * (2 * number + 1) / 6
+	return number * (number + 1) * (2*number + 1) / 6
 }
 
 // Get the difference of the square of the sums and the sum of the squares of the number provided

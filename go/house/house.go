@@ -2,7 +2,7 @@ package house
 
 type Phrase struct {
 	subject string
-	action string
+	action  string
 }
 
 // Define all lines' subjects and how they relate to their objects
@@ -33,7 +33,9 @@ func Verse(subject string, relPhrases []string, nounPhrase string) string {
 // Recurse through the relational phrases, using the first as the subject to embed and the recursion as the rest of
 // the string
 func recursiveEmbed(relPhrases []string, nounPhrase string) string {
-	if len(relPhrases) > 0 { return Embed(relPhrases[0], recursiveEmbed(relPhrases[1:], nounPhrase)) }
+	if len(relPhrases) > 0 {
+		return Embed(relPhrases[0], recursiveEmbed(relPhrases[1:], nounPhrase))
+	}
 	return nounPhrase
 }
 
@@ -45,7 +47,7 @@ func Song() string {
 	relPhrases := make([]string, 0)
 	// Loop through the subjects and actions and make relational phrases out of them
 	for i := 0; i < len(phrases); i++ {
-		relPhrases = append(relPhrases, "the " + phrases[i].subject + "\nthat " + phrases[i].action)
+		relPhrases = append(relPhrases, "the "+phrases[i].subject+"\nthat "+phrases[i].action)
 	}
 	// Move backwards through relPhrases and make a verse from the last n phrases
 	for i := len(relPhrases) - 1; i >= 0; i-- {
